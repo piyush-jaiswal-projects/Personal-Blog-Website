@@ -534,8 +534,27 @@ top: 2rem;
     width: 70%;
     background-color: rgb(241, 242, 243);
    padding: 2rem;
-   margin-left: 3rem;
-   margin-top: 3rem;
+   /* margin-left: 3rem;
+   margin-top: 3rem; */
+   margin: auto;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    font-size: 1.2rem;
+}
+
+.custom-blog-title{
+    color:rgb(9, 70, 160);
+    font-family: 'Lato', sans-serif;
+}
+
+.custom-blog-content{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.custom-article-image{
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: auto;
 }
