@@ -360,6 +360,16 @@ right: -10rem;
     left: 1.7rem;
     margin-bottom: 0.5rem;
 }
+.bookcover001{
+    margin-top: 0.5rem;
+margin-left: 0;
+width: 7.8rem;
+height: 8rem; 
+text-align: center;
+position: relative;
+left: 0rem;
+margin-bottom: 0.5rem;
+}
 
 .episodeTitle{
     float: right;
@@ -543,7 +553,7 @@ top: 2rem;
 
 
 .blogDiv{
-    width: 70%;
+    width: 65%;
     background-color: rgb(241, 242, 243);
    padding: 2rem;
    /* margin-left: 3rem;

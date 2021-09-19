@@ -54,8 +54,8 @@ const postSchema = {
 
 const notesSchema = {
   title: String,
-  content: String,
-  code: String
+  code: String,
+  content: String
 }
 
 const Post = mongoose.model("Post", postSchema);
@@ -89,9 +89,7 @@ app.get('/',function(req,res) {
   });
 
   app.get('/newsletter',function(req,res) {
-    res.render("newsletter", {
-      letters: letters
-    });
+    res.render("newsletter");
   });
 
   app.get('/bookNotes',function(req,res) {
@@ -248,7 +246,7 @@ app.get('/',function(req,res) {
   });
 
 
-  app.get("/bookNotes/:noteId", function(req, res){
+  app.get("/bookNotes/:code", function(req, res){
     // const requestedTitle = _.lowerCase(req.params.bookName);
 
     // notes.forEach(function(note){
@@ -262,12 +260,13 @@ app.get('/',function(req,res) {
 
     //  }
     // });
-    const requestedNoteId = req.params.noteId;
+    const requestedNoteCode = req.params.code;
+    app.set('views', [path.join(__dirname, 'views'),
+                      path.join(__dirname, 'views/notes/')]);
 
-    Notes.findOne({_id: requestedNoteId}, function(err, note){
-      res.render("note", {
-        title: note.title,
-        content: note.content
+    Notes.findOne({code: requestedNoteCode}, function(err, note){
+      res.render(requestedNoteCode, {
+        title: note.title
       });
     });
   });

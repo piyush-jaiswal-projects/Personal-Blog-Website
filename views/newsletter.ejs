@@ -30,12 +30,10 @@
 
         <div class="navigationBar">
           <a href="/" class="navLink"> Home </a>
-          <a href="/blog" class="navLink"> Blog </a>
+          <a href="/blog" class="navLink"> Article </a>
           <a href="/bookNotes" class="navLink"> Book Notes </a>
           <a href="/newsletter" class="navLink"> Newsletter </a>
-          <a href="https://open.spotify.com/show/3X2LMzK07AOwG4N8zXh1A1?si=KXvNa11sR-eC-vG33104fg&dl_branch=1" class="navLink" target="_blank"> Podcast </a>
           <a href="/about" class="navLink"> About Me </a>
-          <a href="/contact" class="navLink"> Contact </a>
 
         </div>
 
@@ -44,51 +42,10 @@
     </header>
 
     <div class="newsletterSection" id="newsletter">
-        <h1 class="newsletterTitle"> Newsletter </h1>
-
-        <div class="newsletterInfo">
-            <p>
-            <b><h2 class="title">Evolve</h2></b>
-            <h5>My weekly newsletter - I share all of the things I have learnt throughout the week. It includes learnings from the podcasts I listen to, skills I learn, books I read, quotes I came across, my experiences and much more. Sign up below if you want to join our growing community,
-              <br>
-              <h6 class="tagLine">Where we learn together and grow together.
-                  </h6>
-            </h5></p>
-          </div>
-
-        <div class="newsletterSignUp">
-            <main class="form-signin">
-          <form action="/" method="POST">
-            <!-- <img class="mb-4" src="public/images/newsletter.png" alt="" width="75" height="72"> -->
-            <h1 class="h3 mb-3 fw-normal customText">Subscribe Here</h1>
-        
-            <div class="form-floating">
-                <input type="text" name="name" class="form-control top" placeholder="Name" required>
-                <label for="floatingInput">Name</label>
-              </div>
-        
-            <div class="form-floating">
-              <input type="email" name="email" class="form-control bottom" placeholder="name@example.com" required>
-              <label for="floatingInput">Email address</label>
-            </div>
-            <br>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Subscribe</button>
-          </form>
-          <p style="color: rgb(233, 227, 227);">Note: After clicking on button, you will receive confirmation. If not, try again.</p>
-        </main>  
-        </div>
-
-    </div>
-
-
-
-  <% letters.forEach(function(letter){ %>
-      <div class="blogContent">
-          <h2 class="blogContentTitle"> <%= letter.title %></h2>
-          <p class="blogContentPara"> <%= letter.content.substring(0, 200) + "..." %> <a href="/newsletter/<%= letter.title %>">Read more</a> </p>
-          
+      <div class="formNews">
+          <script async data-uid="4f93cebb50" src="https://colossal-trailblazer-7317.ck.page/4f93cebb50/index.js"></script>
       </div>
-  <%    });    %>
+      </div>
 
 
 
