@@ -4,6 +4,10 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require('mongoose');
 
+var fs = require('fs');
+var path = require('path');
+require('dotenv/config');
+
 const homeStartingContent = "Lacus vel facilisis volutpat est velit egestas dui id ornare. Semper auctor neque vitae tempus quam. Sit amet cursus sit amet dictum sit amet justo. Viverra tellus in hac habitasse. Imperdiet proin fermentum leo vel orci porta. Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Odio euismod lacinia at quis risus sed vulputate odio ut. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.";
 const aboutContent = "Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Non diam phasellus vestibulum lorem sed. Platea dictumst quisque sagittis purus sit. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Mauris in aliquam sem fringilla. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Amet massa vitae tortor condimentum lacinia quis vel eros. Enim ut tellus elementum sagittis vitae. Mauris ultrices eros in cursus turpis massa tincidunt dui.";
 const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
@@ -15,16 +19,43 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/personalWebsiteDB", {useNewUrlParser: true});
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
+mongoose.connect("mongodb://localhost:27017/personalWebsiteDB",
+	{ useNewUrlParser: true, useUnifiedTopology: true }, err => {
+		console.log('connected')
+	});
+
+  var multer = require('multer');
+
+  var storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, 'uploads')
+    },
+    filename: (req, file, cb) => {
+      cb(null, file.fieldname + '-' + Date.now())
+    }
+  });
+  
+
+  var upload = multer({ storage: storage });
+// Step 6 - load the mongoose model for Image
+
+var imgModel = require('./model');
+// Step 7 - the GET request handler that provides the HTML UI
+
 
 const postSchema = {
   title: String,
-  content: String
+  content: String,
+  code: String
 };
 
 const notesSchema = {
   title: String,
-  content: String
+  content: String,
+  code: String
 }
 
 const Post = mongoose.model("Post", postSchema);
@@ -84,26 +115,27 @@ app.get('/',function(req,res) {
   });
 
   app.get('/compose',function(req,res) {
+
     res.render("compose");
+
+    // imgModel.find({}, (err, items) => {
+    //   if (err) {
+    //     console.log(err);
+    //     res.status(500).send('An error occurred', err);
+    //   }
+    //   else {
+    //     res.render('compose', { items: items });
+    //   }
+    // });
+
   });
 
-  app.post("/composePost", function(req,res){
-  //  const postTitle = req.body.postTitle;
-  // const postBody = req.body.postContent;
-
-  //  const post = {
-  //      title: postTitle,
-  //      content: postBody
-  //  };
-
-  //  posts.push(post);
-
-  //  res.redirect("/blog");
-
+  app.post("/composePost", upload.single('image'), (req, res, next) => {
 
    const post = new Post({
     title: req.body.postTitle,
-    content: req.body.postContent
+    content: req.body.postContent,
+    code: req.body.postCode
   });
 
 
@@ -112,6 +144,27 @@ app.get('/',function(req,res) {
         res.redirect("/blog");
     }
   });
+
+
+  // var obj = {
+	// 	name: req.body.name,
+	// 	desc: req.body.desc,
+	// 	img: {
+	// 		data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
+	// 		contentType: 'image/png'
+	// 	}
+	// }
+	// imgModel.create(obj, (err, item) => {
+	// 	if (err) {
+	// 		console.log(err);
+	// 	}
+	// 	else {
+	// 		// item.save();
+	// 		res.redirect('/compose');
+	// 	}
+	// });
+
+
   });
 
 
@@ -132,7 +185,8 @@ app.get('/',function(req,res) {
 
     const note = new Notes({
       title: req.body.bookTitle,
-      content: req.body.bookContent
+      content: req.body.bookContent,
+      code: req.body.bookCode
     });
   
   
@@ -160,7 +214,7 @@ app.get('/',function(req,res) {
 
 
 
-  app.get("/blog/:postId", function(req, res){
+  app.get("/blog/:code", function(req, res){
     // const requestedTitle = _.lowerCase(req.params.postName);
 
     // posts.forEach(function(post){
@@ -176,13 +230,20 @@ app.get('/',function(req,res) {
     // });
 
 
-    const requestedPostId = req.params.postId;
+    var requestedPostCode = req.params.code;
 
-  Post.findOne({_id: requestedPostId}, function(err, post){
-    res.render("post", {
-      title: post.title,
-      content: post.content
-    });
+    app.set('views', [path.join(__dirname, 'views'),
+                      path.join(__dirname, 'views/articles/')]);
+
+  Post.findOne({code: requestedPostCode}, function(err, post){
+    res.render(requestedPostCode, {
+        title: post.title
+      });
+    // inside code is below
+    // , {
+    //   title: post.title,
+    //   content: post.content
+    // }
   });
   });
 

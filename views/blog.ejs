@@ -44,7 +44,7 @@
 
     <div class="blogLandingpage">
         <img src="/images/blog.png" class="blogImage blogBG">
-        <h6 class="customBlogTitle introduction">I write articles on productivity, careers and stuff I find interesting. I hope you find it valuable.</h6>
+        <h6 class="customBlogTitle introduction">I write articles on productivity, startups, web development and stuff I find interesting. I hope you also find it interesting.</h6>
     </div>
 
 
@@ -58,7 +58,7 @@
     <% posts.forEach(function(post){ %>
         <div class="blogContent">
             <h2 class="blogContentTitle"> <%= post.title %></h2>
-            <p class="blogContentPara"> <%= post.content.substring(0, 200) + "..." %> <a href="/blog/<%= post._id %>">Read more</a> </p>
+            <p class="blogContentPara"> <%= post.content.substring(0, 200) + "..." %> <a href="/blog/<%= post.code %>">Read more</a> </p>
             
         </div>
     <%    });    %>
