@@ -113,18 +113,25 @@ app.get('/',function(req,res) {
   });
 
   app.get('/compose',function(req,res) {
+    res.render("admin");
 
-    res.render("compose");
+  });
 
-    // imgModel.find({}, (err, items) => {
-    //   if (err) {
-    //     console.log(err);
-    //     res.status(500).send('An error occurred', err);
-    //   }
-    //   else {
-    //     res.render('compose', { items: items });
-    //   }
-    // });
+  app.get('/admin', function(req, res){
+      res.render("admin");
+  });
+
+  app.post("/authorization", function(req, res){
+      const user = req.body.username;
+      const pass = req.body.password;
+      const username = "@piyush72104792832154";
+      const password = "#PJaiswal7210479283";
+      if(user == username && pass == password){
+        res.render("compose");
+      }
+      else{
+        res.render("failure");
+      }
 
   });
 
