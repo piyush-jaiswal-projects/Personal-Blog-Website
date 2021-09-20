@@ -108,7 +108,7 @@ app.get('/',function(req,res) {
 
   });
 
-  app.post("/composePost", upload.single('image'), (req, res, next) => {
+  app.post("/composePost", function(req, res) {
 
    const post = new Post({
     title: req.body.postTitle,
