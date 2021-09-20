@@ -9,8 +9,6 @@ var path = require('path');
 require('dotenv/config');
 
 const homeStartingContent = "Lacus vel facilisis volutpat est velit egestas dui id ornare. Semper auctor neque vitae tempus quam. Sit amet cursus sit amet dictum sit amet justo. Viverra tellus in hac habitasse. Imperdiet proin fermentum leo vel orci porta. Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Odio euismod lacinia at quis risus sed vulputate odio ut. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.";
-const aboutContent = "Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Non diam phasellus vestibulum lorem sed. Platea dictumst quisque sagittis purus sit. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Mauris in aliquam sem fringilla. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Amet massa vitae tortor condimentum lacinia quis vel eros. Enim ut tellus elementum sagittis vitae. Mauris ultrices eros in cursus turpis massa tincidunt dui.";
-const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
 
 const app = express();
 
@@ -27,23 +25,6 @@ mongoose.connect("mongodb+srv://pjadmin2154:pj7210479283@cluster0.dwjvq.mongodb.
 		console.log('connected')
 	});
 
-  var multer = require('multer');
-
-  var storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-      cb(null, 'uploads')
-    },
-    filename: (req, file, cb) => {
-      cb(null, file.fieldname + '-' + Date.now())
-    }
-  });
-  
-
-  var upload = multer({ storage: storage });
-// Step 6 - load the mongoose model for Image
-
-var imgModel = require('./model');
-// Step 7 - the GET request handler that provides the HTML UI
 
 
 const postSchema = {
@@ -62,19 +43,13 @@ const Post = mongoose.model("Post", postSchema);
 const Notes = mongoose.model("Note", notesSchema);
 
 
-// let posts = [];
-// let notes = [];
-// let letters = [];
+
 
 app.get('/',function(req,res) {
     res.render("index");
   });
 
   app.get('/blog',function(req,res) {
-    // res.render("blog", {
-    //     startingContent: homeStartingContent,
-    //     posts: posts
-    // });
 
     Post.find({}, function(err, posts){
       res.render("blog", {
@@ -93,9 +68,7 @@ app.get('/',function(req,res) {
   });
 
   app.get('/bookNotes',function(req,res) {
-    // res.render("bookNotes", {
-    //     notes: notes 
-    // });
+
 
     Notes.find({}, function(err, notes){
       res.render("bookNotes", {
@@ -151,42 +124,12 @@ app.get('/',function(req,res) {
   });
 
 
-  // var obj = {
-	// 	name: req.body.name,
-	// 	desc: req.body.desc,
-	// 	img: {
-	// 		data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
-	// 		contentType: 'image/png'
-	// 	}
-	// }
-	// imgModel.create(obj, (err, item) => {
-	// 	if (err) {
-	// 		console.log(err);
-	// 	}
-	// 	else {
-	// 		// item.save();
-	// 		res.redirect('/compose');
-	// 	}
-	// });
-
-
   });
 
 
  
   app.post("/composeNotes", function(req,res){
-  //   const bookTitle = req.body.bookTitle;
-  //  const bookBody = req.body.bookContent;
- 
-  //   const note = {
-  //       title: bookTitle,
-  //       content: bookBody
-  //   };
- 
-  //   notes.push(note);
- 
-  //   res.redirect("/bookNotes");
-
+  
 
     const note = new Notes({
       title: req.body.bookTitle,
@@ -220,20 +163,6 @@ app.get('/',function(req,res) {
 
 
   app.get("/blog/:code", function(req, res){
-    // const requestedTitle = _.lowerCase(req.params.postName);
-
-    // posts.forEach(function(post){
-    //  const storedTitle = _.lowerCase(post.title);
-
-    //  if(storedTitle === requestedTitle){
-    //   res.render("post", {
-    //     title: post.title,
-    //     content: post.content
-    //   });   
-
-    //  }
-    // });
-
 
     var requestedPostCode = req.params.code;
 
@@ -244,29 +173,12 @@ app.get('/',function(req,res) {
     res.render(requestedPostCode, {
         title: post.title
       });
-    // inside code is below
-    // , {
-    //   title: post.title,
-    //   content: post.content
-    // }
   });
   });
 
 
   app.get("/bookNotes/:code", function(req, res){
-    // const requestedTitle = _.lowerCase(req.params.bookName);
 
-    // notes.forEach(function(note){
-    //  const storedTitle = _.lowerCase(note.title);
-
-    //  if(storedTitle === requestedTitle){
-    //   res.render("note", {
-    //     title: note.title,
-    //     content: note.content
-    //   });   
-
-    //  }
-    // });
     const requestedNoteCode = req.params.code;
     app.set('views', [path.join(__dirname, 'views'),
                       path.join(__dirname, 'views/notes/')]);
