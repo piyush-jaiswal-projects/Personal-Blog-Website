@@ -7,12 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Adding Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Georama&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 <!-- Adding Stylesheet -->
     <link rel="stylesheet" href="/css/homeStyles.css">
 
@@ -34,42 +37,27 @@
             <a href="/blog" class="navLink"> Articles </a>
             <a href="/bookNotes" class="navLink"> Book Notes </a>
             <a href="/newsletter" class="navLink"> Newsletter </a>
+            
             <a href="/about" class="navLink"> About Me </a>
 
         </div>
 
         <hr class="divider">
 
-
-
     </header>
 
-    <div class="blogLandingpage">
-        <img src="/images/book.png" class="blogImage blogBG">
-        <h6 class="customBlogTitle introduction">I read a lot of books and take notes from them. I hope this will be valuable for you.</h6>
+
+    <div class="blogDiv">
+        <img src="/images/web.png" class="custom-article-image"></img>
+        <br>
+        <h1 class="alignTitle custom-blog-title"><%=title%> <br> SORRY! Content upload in process:-(</h1>
+        <hr class="titleUnderline">
     </div>
 
-   <div class="notesFlex">
-
-
- <!-- Apply for loop over here -->
-
-<% notes.forEach(function(note){ %>
-        <div class="bookNotes1 Notes">
-            <img src="images/Cbook.png" class="bookcover001">
-             <div class="notesIntro">
-            <h4><%= note.title %></h4>
-            <a href="/bookNotes/<%=note.code%>">Read notes & Summary</a>
-            <br>
-            <a href="<%=note.content %>">Purchase book</a>
-        </div>
-        </div>
-<%    });    %>
+   
 
 
 
-
-</div>
 
     <footer class="footer blogFooterClass" id="foot">
         <h3 class="footerText blogFooterText">Piyush Jaiswal &#169; 2021 </h3>
@@ -79,12 +67,12 @@
        piyushjaiswalofficial001@gmail.com            </h5>
 
         <div class="socialLinks"> 
-            <a href="https://www.instagram.com/_piyush.jaiswal/" target="_blank"><img src="images/ig.png" class="socialicons"></a>
-            <a href="https://www.linkedin.com/in/piyush-jaiswal-156405203/" target="_blank"><img src="images/li.png" class="socialicons"></a>
-            <a href="https://www.youtube.com/channel/UCxWTY6UOc_3cDLpEb0xqvpg" target="_blank"><img src="images/yt.png" class="socialicons"></a>
-            <a href="https://twitter.com/PiyushJ17317768" target="_blank"><img src="images/tw.png" class="socialicons"></a>
+            <a href="https://www.instagram.com/_piyush.jaiswal/" target="_blank"><img src="/images/ig.png" class="socialicons"></a>
+            <a href="https://www.linkedin.com/in/piyush-jaiswal-156405203/" target="_blank"><img src="/images/li.png" class="socialicons"></a>
+            <a href="https://www.youtube.com/channel/UCxWTY6UOc_3cDLpEb0xqvpg" target="_blank"><img src="/images/yt.png" class="socialicons"></a>
+            <a href="https://twitter.com/PiyushJ17317768" target="_blank"><img src="/images/tw.png" class="socialicons"></a>
 
         </div>
     </footer>
 </body>
-</html>     
+</html>   
