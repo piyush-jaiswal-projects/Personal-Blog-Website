@@ -22,7 +22,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-mongoose.connect("mongodb://localhost:27017/personalWebsiteDB",
+mongoose.connect("mongodb+srv://pjadmin2154:pj7210479283@cluster0.dwjvq.mongodb.net/personalWebsiteDB",
 	{ useNewUrlParser: true, useUnifiedTopology: true }, err => {
 		console.log('connected')
 	});
