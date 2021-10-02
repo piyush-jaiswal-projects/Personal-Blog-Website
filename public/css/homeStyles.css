@@ -1,460 +1,282 @@
+@media only screen and (max-width:425px){
 html, body{
-    height: 100%;
+    width: 100%;
 }
 
-.websiteHeadingPart1, .websiteHeadingPart2{
-    color: rgb(9, 70, 160);
-    font-family: 'Style Script', cursive;
-    font-size: 3rem;
-    position: absolute;
-    top: 1rem;
-    left: 3rem;
-    margin: 0;
+.overflow{
+    overflow: hidden;
 }
 
-.customNews{
-    color: white;
+.websiteHeadingPart1{
+ display: none;
 }
 
-.websiteHeadingPart2{
-    position: absolute;
-    left: 10rem;
-}
-.divider{
-    margin-top: 5rem;
-}
-
-.navigationBar{
-    position: absolute;
-    right: 3rem;
-    top: 3rem;
+.titleImage{
+    width: 15%;
+    position: relative;
+    top: 2vw;
+    left: 2vw;
 }
 
-.navLink{
-    padding-right: 1.5rem;
+.navLink, .articleLink{
+    padding-right: 0.5vw;
     color: grey;
-    font-size: 1.2rem;
+    font-size: 5vw;
     font-family: 'Georama', sans-serif;
     text-decoration: none;
 }
 
-.navLink:hover{
+.navLink:hover, .articleLink:hover {
     color: rgb(9, 70, 160);
 }
 
-.landingillustration{
-    width: 50rem;
-    height: 25rem;
+.dropdown {  
+    display: inline;  
     position: relative;
-    right: -34rem;
-    bottom: 11rem;
+    top: 2vw;
+    left: 70vw;
+}  
+
+.navigationBar {  
+    position: absolute;  
+    background-color: lightgrey;  
+    min-width: 10%;
+    text-align: right;  
+    display: none;  
+    z-index: 1;  
+}  
+.navigationBar a {  
+    color: black;  
+    padding: 12px 16px;  
+    text-decoration: none;  
+    display: block;  
+}  
+.navigationBar a:hover {  
+    background-color: rgb(130, 178, 223);  
+}  
+.dropdown:hover .navigationBar {  
+    display: block;  
+}  
+.dropdown:hover .dropbtn {  
+    background-color: grey;  
+} 
+
+.menuClass{
+    width: 10%;
+}
+
+.landingSection, .blogSection{
+    margin: auto;
+    width: 100%;
 }
 
 .mainHeading{
-    margin: 0;
-    line-height: 1rem;
-    font-size: 2rem;
+    width: 100%;
     position: relative;
-    left: 6.8rem;
-    top: 7rem;
-    width: 30rem;
+    top: 5vw;
+    padding-left: 10vw;
 }
+
 
 .introduction{
- line-height: 1.9rem;
-}
-
-.color{
-    color: rgb(5, 41, 94); 
-}
-
-.theme{
-    font-size: 1.5rem;
-    color: grey;
-    line-height: 1.4rem;
-    width: 90%;
-}
-
-.landingSection{
-    margin-bottom: 0;
-    padding-bottom: 0;
-    height: 90%;
-}
-
-.line{
-    line-height: 3.3rem; 
-    font-size: 4rem;
-}
-
-.blogSection, .bookSection, .podcastSection, .newsletterSection, .aboutSection{
-    margin-top: 0;
     position: relative;
-    height: 100%;
-    width: 100%;
-}
+    bottom: 3vw;
+    line-height: 6vw;
+    font-size: 7vw;
+    font-weight: 500;
+   }
+   
+   .color{
+       color: rgb(5, 41, 94); 
+   }
+   
+   .theme{
+       font-size: 6vw;
+       color: grey;
+       line-height: 5vw;
+       width: 90%;
+       position: relative;
+       bottom: 4vw;
+   }
+   
+   .line{
+       line-height: 9vw; 
+       font-size: 13vw;
+   }
 
-.blogImage{
-    width: 30rem;
-    height: 25rem;
-    position: relative;
-    left: 3rem;
-}
+   .landingillustration{
+       width: 95%;
+       height: auto;
+   }
 
-.podcastImage{
-    width: 40rem;
-    height: 25rem;
-    position: relative;
-    left: 0rem;
-}
-
-.bookImage{
-    width: 28rem;
-    height: 23rem;
-    position: relative;
-    right: 6rem;
-    top: 4rem;
-    float: right;
-}
-
-.blogTitle, .bookTitle, .podcastTitle, .newsletterTitle, .aboutTitle{
+   .blogTitle, .bookTitle, .aboutTitle{
     text-align: center;
-    margin-top: 0;
+    margin-top: 5vw;
     font-family: 'Style Script', cursive;
-    font-size: 4rem;
+    font-size: 14vw;
     color: rgb(9, 70, 160);
-}
+   }
 
-.footer{
-    background-color: rgb(4, 26, 59);
-    width: 100%;
-    height: 30%;
-    margin: 0;
-    padding: 0;
-}
-
-.socialicons{
-    height: 2rem;
-    width: 2rem;
-    margin: 1rem;
-    position: relative;
-    top: -4rem;
-}
-
-.socialLinks{
-    position: relative;
-    top: 0.5rem;
-    margin-left: 65rem;
-    height: 10%;
-}
-
-.footerText{
-    color: white;
-    font-family: 'Georama', sans-serif;
-    font-weight: lighter;
-    font-size: 1.5rem;
-    width: 150%;
-    position: relative;
-    left: -70rem;
-    top: 3rem;
-    margin-left: 0rem;
-}
-
-.footerPara{
-    font-size: 1rem;
-    color: teal;
-    position: relative;
-    left: -70rem;
-    top: 3rem;
-}
-
-.newsletterSignUp{
-width: 30%;
-text-align: center;
-position: relative;
-top: 1rem;
-left: 15rem;
-border-radius: 5rem;
-border-color: red;
-border-width: 2rem;
-float: left;
-}
-
-.newsletterInfo{
-    width: 40%;
-    float: left;
-    position: relative;
-    left: 10rem;
-    top: 1rem;
-}
-
-.tagLine{
-    font-style: italic;
-    font-size: larger;
-    color: white;
-  }
-
-.newsletterSection{
-      padding: 0;
-      padding-top: 2rem;
-      margin-bottom: 2rem;
-      align-items: center;
-      height: 100%;
-    background-color: rgb(144, 169, 207);
-  }
-
-  .formNews{
-      position: absolute;
-      left: 19rem;
-  }
-
-.aboutBackground{
-    margin-top: 0;
-    padding-top: 0;
-    width: 40rem;
-    height: 40rem;
-    position: relative;
-    bottom: 3rem;
-    left: 10rem;
-    float: left;
-}
-
-.aboutmeInfo{
-    background-color: #a6e0e9;
-    width: 40%;
-    height: 60%;
-    padding: 0;
-    margin: 0;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    position: relative;
-    top: 3rem;
-    left: 9rem;
-    float: left;
-
-}
-
-.infoText{
-    margin: 2rem;
-    font-family: 'Dancing Script', cursive;
-    font-size: 2rem;
-    color: rgb(9, 70, 160);
-    text-align: center;
-}
-
-.custom{
-    position: relative;
-    left: 22rem;
-    bottom: 13rem;
-}
-
-
-.podcastIntro{
+   .desc{
     color: black;
     font-family: 'Georama', sans-serif;
-    font-size: 1.5rem;
+    font-size: 6vw;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    padding-left: 10vw;
+    bottom: 280vw;
+   }
+
+   .blogEpisode1, .blogEpisode2, .blogEpisode3{
+    background-color: white;
     width: 40%;
-    float: left;
+    margin-left: 7vw;
     position: relative;
-    top: 4rem;
-
-}
-
-.podcastImage, .blogImage{
-    float: left;
-}
-
-.podcastEpisode{
-    background-color: white;
-    width: 70%;
-    height: 10%;
-    position: relative;
-    left: 4rem;
-    top: 1.5rem;
+    bottom: 280vw;
     padding: 0;
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 3vw;   
+    float: left;
 }
-.articleTitle{
-    font-weight: bold;
-    color: rgb(9, 70, 160);
+
+   .blogepisodeIcon{
+       width: 100%;
+   }
+
+   .articleTitle{
     text-align: center;
-    margin-top: 0;
-    padding-top: 0;
+    font-size: 4vw;
+   }
+
+   .intro{
+       float: left;
     position: relative;
-    bottom: 1rem;
+    top: 280vw;
+    width: 100%;
+   }
+
+   .bookintro{
+    float: left;
+ position: relative;
+ width: 100%;
 }
 
-.blogEpisode1, .blogEpisode2, .blogEpisode3, .bookNotes1, .bookNotes2, .bookNotes3, .bookNotes4, .bookNotes5, .bookNotes6{
-    background-color: white;
-    width: 25%;
+   .blogImage, .bookImage{
+   position: relative;
+   top: 0vw;
+   width: 95%;
+   }
+
+   .customBlog, .customBookNotes{
+       width: 70%;
+       margin: auto;
+       position: relative;
+       left: 15vw;
+   }
+
+.bookSection{
+    width: 100%;
+}
+
+.bookdesc{
+    color: black;
+    font-family: 'Georama', sans-serif;
+    font-size: 6vw;
+    width: 100%;
+    text-align: left;
     position: relative;
-    left: 0rem;
-    top: 1.5rem;
+    padding-left: 10vw;
+   }
+
+.bookNotes1, .bookNotes2, .bookNotes3, .bookNotes4, .bookNotes5{
+    background-color: white;
+    width: 40%;
+    position: relative;
+    margin-left: 7vw;
     padding: 0;
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 3vw;   
     float: left;
-}
-
-.bookNotes1, .bookNotes2, .bookNotes3, .bookNotes5, .bookNotes6{
-    height: 100%;
-}
-
-.blogEpisode2, .bookNotes2, .bookNotes5{
-    position: relative;
-    left: 3.5rem;
 }
 
 .bookNotes5{
-position: relative;
-left: 5.5rem;
-}
-
-.bookNotes4{
-    position: relative;
-    left: -7rem;
-    top: 14rem;
-}
-
-
-.blogEpisode3, .bookNotes3, .bookNotes6{
-    position: relative;
-    left: 7rem;
-}
-
-.bookNotes5, .bookNotes6{
-    position: relative;
-    top: 5rem;
-}
-
-.articleLink{
-    text-decoration: none;
-}
-
-.customBlog{
-position: relative;
-right: 52rem;
-top: 26rem;
-}
-
-.podcastepisodeImage, .blogepisodeIcon{
-    width: 8rem;
-    height: 8rem;
-    border-radius: 1rem 0 0 1rem;
-    
-}
-
-.newsletter{
-width: auto;
-margin: auto;
-position: relative;
-right: -10rem;
+    display: none;
 }
 
 .bookCover{
-    margin-top: 0.5rem;
-    width: 5rem;
-    height: 8rem; 
-    text-align: center;
-    position: relative;
-    left: 1.7rem;
-    margin-bottom: 0.5rem;
-}
-.bookcover001{
-    margin-top: 0.5rem;
-margin-left: 0;
-width: 7.8rem;
-height: 8rem; 
-text-align: center;
-position: relative;
-left: 0rem;
-margin-bottom: 0.5rem;
+    width: 100%;
 }
 
-.episodeTitle{
-    float: right;
+.bookImage{
     position: relative;
-    bottom: -2rem;
-    left: -1.5rem;
-    font-size: 1.3rem;
-    font-weight: bold;
+    top: 7vw;
+    left: 2vw;
+    margin-bottom: 5vw;
 }
 
-.episodeClick{
-    float: right;
-    text-decoration: none;
-    position: relative;
-    bottom: 4rem;
-    left: -3.5rem;
+.newsletterSection{
+    width: 100%;
+    height: auto;
 }
 
-.customPodcast{
-    position: relative;
-    top: -1rem;
-    left: 12rem;
+.formNews{
+    overflow: scroll;
+    width: 100%;
+    
 }
 
-.podcastTitle{
-    position: relative;
-    top: 2rem;
+.aboutSection{
+    width: 100%;
 }
 
-.blogTitle{
-    position: relative;
-    top: 1rem;
-}
-
-.bookTitle{
-    position: relative;
-    top: 1rem;
-}
-
-.blogIntro{
-    color: black;
+.aboutmeInfo{
+    margin: auto;
+    color: rgb(48, 47, 47);
     font-family: 'Georama', sans-serif;
-    font-size: 1.5rem;
-    width: 40%;
-    float: left;
-    position: relative;
-    top: 2rem;
-    left: 10rem;
-}
-
-.customBookNotes{
-    position: relative;
-    top: 28rem;
-    left: 24rem;
-}
-
-
-
-
-
-
-/* Styling of blog page */
-.blogLandingpage{
-    width: 60%;
-    height: 60%;
-    position: relative;
-    top: 7rem;
-    left: 17rem;
-}
-
-.blogLandingImage{
+    font-size: 6vw;
+    width: 90%;
     text-align: center;
-    height: 15em;
-    width: 15rem;
-    position: relative;
-    margin: 0;
+   }
 
+.footer{
+    overflow: hidden;
+    background-color: rgb(4, 4, 46);
+   }
+
+.footerText{
+    margin: 5vw;
+    color: rgb(111, 178, 236);
+    text-align: center;
 }
 
-.blogpageEpisode1, .blogpageEpisode2, .blogpageEpisode3{
+.email{
+    font-size: 5vw;
+    color: rgb(78, 82, 85);
+    text-align: center;
     position: relative;
-    bottom: 10rem;
+    bottom: 5vw;
 }
 
-.blogContent{
+.socialicons{
+    width: 7%;
+    padding: 1vw;
+    position: relative;
+    bottom: 5vw;
+    left: 33vw;
+}
+
+.blogpageIntro, .notespageIntro{
+    color: rgb(144, 145, 148);
+    text-align: center;
+    padding: 2vw;
+    font-size: 6vw;
+    font-family: 'Georama', sans-serif;
+}
+
+.blogContent, .Notes{
     width: 70%;
     padding: 2rem;
 position: relative;
@@ -466,25 +288,6 @@ top: 2rem;
     margin-bottom: 1.5rem;
 }
 
-.customBlogTitle{
-    font-size: 2rem;
-    text-align: center;
-    position: relative;
-    bottom: 8rem;
-}
-
-.newsletterLandingpage{
-    width: 60%;
-}
-
-.customNewsletterTitle{
-   font-size: 5rem;
-}
-
-.customInfo{
-    font-size: 2rem;
-}
-
 .blogContentTitle, .blogContentPara{
     font-family: 'Roboto', sans-serif;
 }
@@ -492,59 +295,20 @@ top: 2rem;
 .blogContentTitle{
     font-weight: 400;
     color: rgb(9, 70, 160);
-}
-
-.blogContentWeight{
-    font-weight: 300;
-}
-
-.blogFooterClass{
-    margin-top: 5rem;
-}
-
-.blogFooterText, .blogFooterPara{
-    width: 50%;
-    position: relative;
-    left: 3rem;
-}
-
-.blogBG{
-    margin: 0;
-    padding: 0;
-    width: 21rem;
-    height: 20rem;
-    position: relative;
-    bottom: 8rem;
-    left: 14rem;
-    float: none;
-}
-
-/* Styles for compose page */
-
-.composeFooterClass{
-    position: relative;
-    top: 19rem;;
-}
-
-.notesIntro{
-    float: right;
     text-align: center;
-    padding-right: 1rem;
-    position: relative;
-    top: 2rem;
 }
 
-.Notes{
-    margin: 3rem;
-    position: relative;
-    flex: 1 0 20%; 
+.notesCover{
+display: none;
 }
 
 .notesFlex{
-    margin: 0;
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
+}
+
+.notesIntro{
+    text-align: center;
 }
 
 .alignTitle{
@@ -554,7 +318,7 @@ top: 2rem;
 
 .blogDiv{
     width: 100%;
-    height: 80%;
+    height: 100%;
     background-color: rgb(236, 241, 247);
    padding: 2rem;
    margin-top: 0;
@@ -563,51 +327,39 @@ top: 2rem;
 }
 
 .titleUnderline{
-    position: relative;
-    top: 5rem;
+    display: none;
     width: 10%;
     border-top: 0.3rem solid;
     color: rgb(0, 0, 0);
     align-items: center;
-    position: relative;
-    left: 35rem;
 }
 
 .custom-blog-title{
     color:rgb(19, 19, 19);
     font-family: 'Lato', sans-serif;
-    position: relative;
-    top: 5rem;
     margin: auto;
     width: auto;
 }
 
 .custom-blog-content{
     font-family: 'Raleway', sans-serif;
-    font-size: 1.5rem;
+    font-size: 6rem;
     text-align: justify;
 }
 
 .custom-article-image{
-    width: 10rem;
-    height: 10rem;
+    width: 50%;
     display: block;
     margin: auto;
     position: relative;
-    top: 5rem;
-    right: 0.8rem;
-}
 
-.blogContentDiv{
-    width: 58%;
-    margin: auto;
-    margin-top: 5rem;
 }
 
 .articleContent{
+    padding: 2vw;
     color: rgb(29, 28, 28);
     font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 1.3rem;
+    font-size: 6vw;
 }
 
 .articleContentHeading{
@@ -620,727 +372,4 @@ top: 2rem;
     text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Applying media queries */
-
-@media screen and (max-width: 480px) {
-    html, body{
-        height: 100%;
-    }
-    
-    .websiteHeadingPart1, .websiteHeadingPart2{
-        /* color: rgb(9, 70, 160);
-        font-family: 'Style Script', cursive;
-        font-size: 13rem;
-        position: absolute;
-        top: 1rem;
-        left: 8rem;
-        margin: 0; */
-        display: none;
-        visibility: hidden;
-    }
-    
-    .customNews{
-        color: white;
-    }
-/*     
-    .websiteHeadingPart2{
-        position: absolute;
-        left: 38rem;
-    } */
-    .divider{
-        margin-top: 4rem;
-        width: 350%;
-        height: 3rem;
-    }
-    
-.titleImage{
-    width: 10rem;
-    height: 10rem;
-    position: relative;
-    left: 2rem;
-    top: 2rem;
-    display: inline;
-    padding: 0;
-    margin: 0;
-    border: none;
-}
-
-    .navigationBar{
-     display: inline-flex;
-     position: absolute;
-     top: 5rem;
-     left: 14rem;
-    }
-    
-    .navLink{
-        padding-right: 2.5rem;
-        color: grey;
-        font-size: 3rem;
-        font-family: 'Georama', sans-serif;
-        text-decoration: none;
-    }
-    
-    .navLink:hover{
-        color: rgb(9, 70, 160);
-    }
-    
-    .landingillustration{
-        margin: auto;
-        width: auto;
-        height: auto;
-        position: relative;
-        top: 10rem;
-        left: 2rem;
-    }
-    
-    .mainHeading{
-        margin: auto;
-        width: 100vw;
-        line-height: 1rem;
-        font-size: 2rem;
-        position: relative;
-        left: 6.8rem;
-        top: 7rem;
-        width: 70rem;
-        height: auto;
-    }
-    
-    .introduction{
-        padding-top: 2rem;
-     line-height: 5rem;
-     font-size: 5rem;
-     
-    }
-    
-    .color{
-        color: rgb(5, 41, 94); 
-    }
-    
-    .theme{
-        padding-top: 2rem;
-        font-size: 4rem;
-        color: grey;
-        line-height: 4rem;
-        width: 90%;
-    }
-    
-    .landingSection{
-        margin-bottom: 0;
-        padding-bottom: 0;
-        height: 90%;
-        display: inline-block;
-    }
-    
-    .line{
-        line-height: 8rem; 
-        font-size: 10rem;
-    }
-    
-    .blogSection, .bookSection, .podcastSection, .newsletterSection, .aboutSection{
-        visibility: hidden;
-        margin-top: 0;
-        position: relative;
-        height: 100%;
-        width: 100%;
-    }
-
-
-    .blogSection{
-        visibility: visible;
-        margin: auto;
-        position: relative;
-        top: 30rem;
-        width: 300%;
-    }
-    
-.aboutSection{
-    visibility: visible;
-    margin: auto;
-    position: relative;
-    top: 140rem;
-    width: 300%;
-}
-
-    .newsletterSection{
-        visibility: visible;
-        margin: auto;
-        width: 330%;
-        height: 335%;
-        position: relative;
-        top: 140rem;
-    }
-
-    .bookSection{
-        visibility: visible;
-        margin: auto;
-        position: relative;
-        top: 30rem;
-        width: 300%;
-    }
-
-    
-    .podcastImage{
-        width: 40rem;
-        height: 25rem;
-        position: relative;
-        left: 0rem;
-    }
-    
-    .bookImage{
-        width: 55rem;
-        height: 50rem;
-        position: relative;
-        left: -5rem;
-        top: 2rem;
-    }
-    
-    .blogTitle, .bookTitle, .podcastTitle, .newsletterTitle, .aboutTitle{
-        text-align: center;
-        margin-top: 0;
-        font-family: 'Style Script', cursive;
-        font-size: 10rem;
-        color: rgb(9, 70, 160);
-        position: relative;
-        left: 4.5rem;
-    }
-
-    .bookTitle{
-        margin-top: 105rem;
-    }
-    
-    .footer{
-        background-color: rgb(4, 26, 59);
-        width: 340%;
-        height: 110%;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        top: 200rem;
-    }
-    
-    .socialicons{
-        height: 4rem;
-        width: 4rem;
-    }
-    
-    .socialLinks{
-        width: 70%;
-       position: relative;
-       right: 35rem;
-    top: 2rem;
-    }
-    
-.email{
-    color: aliceblue;
-    font-size: 4rem;
-    position: relative;
-     bottom: 13rem;
-     left: 8rem;
-}
-
-    .footerText{
-        color: white;
-        font-family: 'Georama', sans-serif;
-        font-weight: lighter;
-        font-size: 1.5rem;
-        width: 150%;
-        position: relative;
-        left: -60rem;
-        top: 9rem;
-        margin-left: 0rem;
-    }
-    
-    .footerPara{
-        font-size: 1rem;
-        color: teal;
-        position: relative;
-
-    }
-    
-    .newsletterSignUp{
-    width: 30%;
-    text-align: center;
-    position: relative;
-    top: 1rem;
-    left: 15rem;
-    border-radius: 5rem;
-    border-color: red;
-    border-width: 2rem;
-    float: left;
-    }
-    
-    .newsletterInfo{
-        width: 40%;
-        float: left;
-        position: relative;
-        left: 10rem;
-        top: 1rem;
-    }
-    
-    .tagLine{
-        font-style: italic;
-        font-size: larger;
-        color: white;
-      }
-    
-
-
-    .newsletterSection{
-          padding: 0;
-          width: 340%;
-          padding-top: 2rem;
-          margin-bottom: 2rem;
-          align-items: center;
-          height: 300%;
-        background-color: rgb(144, 169, 207);
-      }
-    
-      .formNews{
-          position: absolute;
-          left: 19rem;
-      }
-    
-    .aboutBackground{
-        margin-top: 0;
-        padding-top: 0;
-        width: 40rem;
-        height: 40rem;
-        position: relative;
-        bottom: 3rem;
-        left: 10rem;
-        float: left;
-    }
-    
-    .aboutmeInfo{
-        background-color: #a6e0e9;
-        width: 100%;
-        height: 180%;
-        padding: 0;
-        margin: 0;
-        border-radius: 1rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        position: relative;
-        top: 3rem;
-        left: 5rem;
-        float: left;
-    }
-    
-    .infoText{
-        margin: 2rem;
-        font-family: 'Dancing Script', cursive;
-        font-size: 5rem;
-        color: rgb(9, 70, 160);
-        text-align: center;
-    }
-    
-.aboutBackground{
-    display: none;
-}
-
-    .custom{
-        visibility: hidden;
-        position: relative;
-        left: 22rem;
-        bottom: 13rem;
-    }
-    
-    
-    .podcastIntro{
-        color: black;
-        font-family: 'Georama', sans-serif;
-        font-size: 1.5rem;
-        width: 40%;
-        float: left;
-        position: relative;
-        top: 4rem;
-    
-    }
-    
-
-    
-    .podcastEpisode{
-        background-color: white;
-        width: 70%;
-        height: 10%;
-        position: relative;
-        left: 4rem;
-        top: 1.5rem;
-        padding: 0;
-        border-radius: 1rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .articleTitle{
-        font-size: 3rem;
-        font-weight: bold;
-        color: rgb(9, 70, 160);
-        text-align: center;
-        margin-top: 0;
-        padding-top: 0;
-        position: relative;
-        bottom: 1rem;
-    }
-    
-    .bookNotes1, .bookNotes2, .bookNotes3, .bookNotes4, .bookNotes5, .bookNotes6{
-        background-color: white;
-        width: 25%;
-        position: relative;
-        left: 1rem;
-        top: 1.5rem;
-        padding: 0;
-        margin-right: 3rem;
-        margin-top: 3rem;
-        border-radius: 1rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        float: left;
-    }
-
-    .bookNotes4, .bookNotes5{
-        position: relative;
-        left: 10rem;
-        top: 1.5rem;
-    }
-
-    .blogEpisode1, .blogEpisode2, .blogEpisode3{
-        margin-top: 2rem;
-        background-color: white;
-        width: 40%;
-        height: auto;
-        position: relative;
-        left: 1.5rem;
-        top: 3rem;
-        padding: 0;
-        margin-right: 5rem;
-        border-radius: 1rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        display: inline-block;
-    }
-
-    .blogEpisode3{
-        margin-top: 5rem;
-        position: relative;
-        left: 18rem;
-    }
-    
-    
-    
-    
-    .articleLink{
-        text-decoration: none;
-    }
-    
-    .customBlog{
-        visibility: hidden;
-    position: absolute;
-    top: 130rem;
-    font-size: 300rem;
-    }
-    
-    .podcastepisodeImage, .blogepisodeIcon{
-        width: 30rem;
-        height: 30rem;
-        border-radius: 1rem 0 0 1rem;
-        
-    }
-    
-    .newsletter{
-    width: auto;
-    margin: auto;
-    position: relative;
-    right: -10rem;
-    }
-    
-    .bookCover{
-        margin-top: 0.5rem;
-        width: 15rem;
-        height: 23rem; 
-        text-align: center;
-        position: relative;
-        left: 1.7rem;
-        margin-bottom: 0.5rem;
-    }
-    .bookcover001{
-        margin-top: 0.5rem;
-    margin-left: 0;
-    width: 7.8rem;
-    height: 8rem; 
-    text-align: center;
-    position: relative;
-    left: 0rem;
-    margin-bottom: 0.5rem;
-    }
-    
-    .episodeTitle{
-        float: right;
-        position: relative;
-        bottom: -2rem;
-        left: -1.5rem;
-        font-size: 1.3rem;
-        font-weight: bold;
-    }
-    
-    .episodeClick{
-        float: right;
-        text-decoration: none;
-        position: relative;
-        bottom: 4rem;
-        left: -3.5rem;
-    }
-    
-    .customPodcast{
-        position: relative;
-        top: -1rem;
-        left: 12rem;
-    }
-    
-    .podcastTitle{
-        position: relative;
-        top: 2rem;
-    }
-    
-    .blogTitle{
-        position: relative;
-        top: 1rem;
-        padding: 0;
-    }
-    
-    .bookTitle{
-        position: relative;
-        top: 1rem;
-    }
-
-    .blogImage{
-        display: none;
-        width: auto;
-        height: auto;
-        position: relative;
-        left: 3rem;
-        top: 30rem;
-    }
-    
-    .blogIntro{
-        margin-top: 0;
-        color: black;
-        font-family: 'Georama', sans-serif;
-        font-size: 4rem;
-        width: 100%;
-        position: relative;
-        bottom: 300rem;
-    }
-    
-    .customBookNotes{
-        visibility: hidden;
-        position: relative;
-        top: 28rem;
-        left: 24rem;
-    }
-    
-    
-    
-    
-    
-    
-    /* Styling of blog page */
-    .blogLandingpage{
-        width: 60%;
-        height: 60%;
-        position: relative;
-        top: 7rem;
-        left: 17rem;
-    }
-    
-    .blogLandingImage{
-        text-align: center;
-        height: 15em;
-        width: 15rem;
-        position: relative;
-        margin: 0;
-    
-    }
-    
-    .blogpageEpisode1, .blogpageEpisode2, .blogpageEpisode3{
-        position: relative;
-        bottom: 10rem;
-    }
-    
-    .blogContent{
-        width: 70%;
-        padding: 2rem;
-    position: relative;
-    top: 2rem;
-        border-radius: 1rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 1.5rem;
-    }
-    
-    .customBlogTitle{
-        font-size: 2rem;
-        text-align: center;
-        position: relative;
-        bottom: 8rem;
-    }
-    
-    .newsletterLandingpage{
-        width: 60%;
-    }
-    
-    .customNewsletterTitle{
-       font-size: 5rem;
-    }
-    
-    .customInfo{
-        font-size: 2rem;
-    }
-    
-    .blogContentTitle, .blogContentPara{
-        font-family: 'Roboto', sans-serif;
-    }
-    
-    .blogContentTitle{
-        font-weight: 400;
-        color: rgb(9, 70, 160);
-    }
-    
-    .blogContentWeight{
-        font-weight: 300;
-    }
-    
-    .blogFooterClass{
-        margin-top: 5rem;
-    }
-    
-    .blogFooterText, .blogFooterPara{
-font-size: 5rem;
-    }
-    
-    .blogBG{
-        margin: 0;
-        padding: 0;
-        width: 21rem;
-        height: 20rem;
-        position: relative;
-        bottom: 8rem;
-        left: 14rem;
-        float: none;
-    }
-    
-    /* Styles for compose page */
-    
-    .composeFooterClass{
-        position: relative;
-        top: 19rem;;
-    }
-    
-    .notesIntro{
-        float: right;
-        text-align: center;
-        padding-right: 1rem;
-        position: relative;
-        top: 2rem;
-    }
-    
-    .Notes{
-        margin: 3rem;
-        position: relative;
-        flex: 1 0 20%; 
-    }
-    
-    .notesFlex{
-        margin: 0;
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    
-    .alignTitle{
-        text-align: center;
-    }
-    
-    
-    .blogDiv{
-        width: 100%;
-        height: 80%;
-        background-color: rgb(236, 241, 247);
-       padding: 2rem;
-       margin-top: 0;
-       font-family: Verdana, Geneva, Tahoma, sans-serif;
-       font-size: 1.2rem;
-    }
-    
-    .titleUnderline{
-        position: relative;
-        top: 5rem;
-        width: 10%;
-        border-top: 0.3rem solid;
-        color: rgb(0, 0, 0);
-        align-items: center;
-        position: relative;
-        left: 35rem;
-    }
-    
-    .custom-blog-title{
-        color:rgb(19, 19, 19);
-        font-family: 'Lato', sans-serif;
-        position: relative;
-        top: 5rem;
-        margin: auto;
-        width: auto;
-    }
-    
-    .custom-blog-content{
-        font-family: 'Raleway', sans-serif;
-        font-size: 1.5rem;
-        text-align: justify;
-    }
-    
-    .custom-article-image{
-        width: 10rem;
-        height: 10rem;
-        display: block;
-        margin: auto;
-        position: relative;
-        top: 5rem;
-        right: 0.8rem;
-    }
-    
-    .blogContentDiv{
-        width: 58%;
-        margin: auto;
-        margin-top: 5rem;
-    }
-    
-    .articleContent{
-        color: rgb(29, 28, 28);
-        font-family: 'Be Vietnam Pro', sans-serif;
-        font-size: 1.3rem;
-    }
-    
-    .articleContentHeading{
-        color: rgb(29, 28, 28);
-        font-family: 'Be Vietnam Pro', sans-serif;
-    }
-    
-    .extLink{
-        color: rgb(9, 70, 160);
-        text-decoration: none;
-    }
-}
+} 

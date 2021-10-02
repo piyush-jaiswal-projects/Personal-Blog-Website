@@ -26,17 +26,22 @@
 </head>
 <body>
     <header>
-        <h1 class="websiteHeadingPart1"> Piyush </h1>
-        <h1 class="websiteHeadingPart2"> Jaiswal </h1>
+        <img src="/images/icon.png" class="titleImage">
+        <h1 class="websiteHeadingPart1"> Piyush Jaiswal </h1>
+        
 
+
+         <div class="dropdown">
+            <a class="dropbtn"><img src="images/menu.png.png" class="menuClass"></a>
         <div class="navigationBar">
-            <a href="/" class="navLink"> Home </a>
-            <a href="/blog" class="navLink"> Articles </a>
-            <a href="/bookNotes" class="navLink"> Book Notes </a>
-            <a href="/newsletter" class="navLink"> Newsletter </a>
-            <a href="/about" class="navLink"> About Me </a>
+         <a href="/" class="navLink"> Home </a>
+         <a href="/blog" class="navLink"> Articles </a>
+         <a href="/bookNotes" class="navLink"> BookNotes </a>
+         <a href="/newsletter" class="navLink"> Newsletter </a>
+         <a href="/about" class="navLink"> AboutMe </a>
 
         </div>
+    </div>
 
         <hr class="divider">
 
@@ -46,7 +51,7 @@
 
     <div class="blogLandingpage">
         <img src="/images/book.png" class="blogImage blogBG">
-        <h6 class="customBlogTitle introduction">I read a lot of books and take notes from them. I hope this will be valuable for you.</h6>
+        <h6 class="notespageIntro">I read a lot of books and take notes from them. I hope this will be valuable for you.</h6>
     </div>
 
    <div class="notesFlex">
@@ -56,9 +61,9 @@
 
 <% notes.forEach(function(note){ %>
         <div class="bookNotes1 Notes">
-            <img src="images/Cbook.png" class="bookcover001">
+            <img src="images/Cbook.png" class="notesCover">
              <div class="notesIntro">
-            <h4><%= note.title %></h4>
+            <h4 class="blogContentTitle"><%= note.title %></h4>
             <a href="/bookNotes/<%=note.code%>">Read notes & Summary</a>
             <br>
             <a href="<%=note.content %>">Purchase book</a>
@@ -66,25 +71,22 @@
         </div>
 <%    });    %>
 
-
-
-
 </div>
 
-    <footer class="footer blogFooterClass" id="foot">
-        <h3 class="footerText blogFooterText">Piyush Jaiswal &#169; 2021 </h3>
-        <h5 class="footerText footerPara blogFooterPara">
-       Shoot me an email at: 
-       <br>
-       piyushjaiswalofficial001@gmail.com            </h5>
+<footer class="footer" id="foot">
+    <h3 class="footerText">Piyush Jaiswal &#169; 2021 </h3>
+    <h5 class="footerText">
+   Shoot me an email at:</h5>
+   <h5 class="email">piyushjaiswalofficial001@gmail.com </h5>           
 
-        <div class="socialLinks"> 
-            <a href="https://www.instagram.com/_piyush.jaiswal/" target="_blank"><img src="images/ig.png" class="socialicons"></a>
-            <a href="https://www.linkedin.com/in/piyush-jaiswal-156405203/" target="_blank"><img src="images/li.png" class="socialicons"></a>
-            <a href="https://www.youtube.com/channel/UCxWTY6UOc_3cDLpEb0xqvpg" target="_blank"><img src="images/yt.png" class="socialicons"></a>
-            <a href="https://twitter.com/PiyushJ17317768" target="_blank"><img src="images/tw.png" class="socialicons"></a>
+    <div class="socialLinks"> 
+        <a href="https://www.instagram.com/_piyush.jaiswal/" target="_blank"><img src="images/ig.png" class="socialicons"></a>
+        <a href="https://www.linkedin.com/in/piyush-jaiswal-156405203/" target="_blank"><img src="images/li.png" class="socialicons"></a>
+        <a href="https://www.youtube.com/channel/UCxWTY6UOc_3cDLpEb0xqvpg" target="_blank"><img src="images/yt.png" class="socialicons"></a>
+        <a href="https://twitter.com/PiyushJ17317768" target="_blank"><img src="images/tw.png" class="socialicons"></a>
 
-        </div>
-    </footer>
+    </div>
+</footer>
+
 </body>
 </html>     

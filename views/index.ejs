@@ -26,10 +26,13 @@
 </head>
 <body>
     <header>
-        <h1 class="websiteHeadingPart1"> Piyush </h1>
-        <h1 class="websiteHeadingPart2"> Jaiswal </h1>
         <img src="/images/icon.png" class="titleImage">
+        <h1 class="websiteHeadingPart1"> Piyush Jaiswal </h1>
+        
 
+
+         <div class="dropdown">
+            <a class="dropbtn"><img src="images/menu.png.png" class="menuClass"></a>
         <div class="navigationBar">
          <a href="/" class="navLink"> Home </a>
          <a href="/blog" class="navLink"> Articles </a>
@@ -38,6 +41,7 @@
          <a href="#about" class="navLink"> AboutMe </a>
 
         </div>
+    </div>
 
         <hr class="divider">
 
@@ -46,11 +50,11 @@
     <div class="landingSection">
 
         <div class="mainHeading">
-            <h2 class="color line">Hey friend</h2>
-            <h1 class="color line">What's up?</h1>
+            <h1 class="color line">Hey friends</h1>
+            <h2 class="color line">What's up?</h2>
             <br>
-            <p class="introduction">Hi I am Piyush. I am a full stack web developer, an engineering student and a young hustler.</p>
-            <p class="theme">On this site we talk about productivity, entrepreneurship, mental health, various career fields and making most out of college.</p>
+            <p class="introduction">Hi, I am Piyush. I am a full stack web developer, an engineering student and a young hustler.</p>
+            <p class="theme">On this site we will talk about productivity, entrepreneurship, mental health, various career fields and making most out of college.</p>
         </div>
 
         
@@ -61,10 +65,8 @@
     
     <div class="blogSection" id="blog">
         <h1 class="blogTitle"> Articles </h1>
-        <img src="images/blog.png" class="blogImage">
-        <a href="/blog"><button class="btn-primary btn-lg customBlog">Read other articles >></button></a>
-        <div class="blogIntro">
-            <p>I write articles on productivity, entrepreneurship, web development and stuff I find interesting. I hope you find it valuable.
+        <div class="intro">
+            <p class="desc">I write articles on productivity, entrepreneurship, web development and stuff I find interesting. I hope you find it valuable.
                 <br>
                 Here are the recent articles:
             </p>
@@ -80,15 +82,21 @@
                 <img src="images/icon1.png" class="blogepisodeIcon">
                 <a href="/blog/A003" class="articleLink"><h6 class="articleTitle">Top productivity tips</h6></a>
             </div>
+            <div class="blogEpisode3">
+                <img src="images/icon1.png" class="blogepisodeIcon">
+                <a href="/blog/A004" class="articleLink"><h6 class="articleTitle">Top productivity tips</h6></a>
+            </div>
         </div>
+        <img src="images/blog.png" class="blogImage">
+        <a href="/blog"><button class="btn-primary btn-lg customBlog">Read other articles</button></a>
+        
         
     </div>
 
     <div class="bookSection" id="book">
         <h1 class="bookTitle"> Book Notes </h1>
-        <img src="images/book.png" class="bookImage">
-        <div class="blogIntro">
-            <p>I read a lot of books and take notes from them. I hope this will be valuable for you.
+        <div class="bookintro">
+            <p class="bookdesc">I read a lot of books and take notes from them. I hope this will be valuable for you.
                 <br>
                 Here are some of my notes:
             </p>
@@ -108,75 +116,15 @@
                 <a href="/bookNotes/B004"  class="articleLink"><img src="images/book2.jpg" class="bookCover"></a>
             </div>
         </div>
-        <a href="/bookNotes"><button class="btn-primary btn-lg customBookNotes">Read other notes >></button></a>
+        
+        <img src="images/book.png" class="bookImage">
+        <a href="/bookNotes"><button class="btn-primary btn-lg customBookNotes">Read other notes</button></a>
         
     </div>
 
-    <!-- <div class="podcastSection" id="podcast">
-        <h1 class="podcastTitle"> Podcast </h1>
-        <img src="images/podcast.png" class="podcastImage">
-        <div class="podcastIntro">
-            <p>This podcast completely focuses on college students and college life. We will cover every aspect from career in various fields, interviews, to health, fitness, relationship. Everything related to college life.
-                <br>
-                Here is the recent episode:
-            </p>
-            <div class="podcastEpisode">
-             <img src="images/3.png" class="podcastepisodeImage">
-             <h3 class="episodeTitle">College life & Startups</h3>
-             <a href="https://open.spotify.com/episode/7CLzzfJNXhxOdSsw0tifxr?si=uIAr3ieNTn25u72rWcyMcw&dl_branch=1" class="episodeLink" target="_blank"><p class="episodeClick">Click to listen</p></a>
-            </div>
-        </div>
-        <a href="https://open.spotify.com/show/3X2LMzK07AOwG4N8zXh1A1?si=KXvNa11sR-eC-vG33104fg&dl_branch=1" target="_blank"><button class="btn-primary btn-lg customPodcast">Listen to other episodes >></button></a>
-
-    </div> -->
-
-
-
-<!-- Newsletter Section Code -->
-    <!-- <div class="newsletterSection" id="newsletter">
-        <h1 class="newsletterTitle"> Newsletter </h1>
-
-        <div class="newsletterInfo">
-            <p>
-            <b><h2 class="title">Evolve</h2></b>
-            <h5>My weekly newsletter - I share all of the things I have learnt throughout the week. It includes learnings from the podcasts I listen to, skills I learn, books I read, quotes I came across, my experiences and much more. Sign up below if you want to join our growing community,
-              <br>
-              <h6 class="tagLine">Where we learn together and grow together.
-                  <br>
-                  <br>
-                  <a href="/newsletter" class="customNews">To read previous Newsletters, click here.</a>
-              </h6>
-            </h5></p>
-          </div>
-
-        <div class="newsletterSignUp">
-            <main class="form-signin">
-          <form action="/" method="POST">
-             <img class="mb-4" src="public/images/newsletter.png" alt="" width="75" height="72"> -->
-            <!-- <h1 class="h3 mb-3 fw-normal customText">Subscribe Here</h1>
-        
-            <div class="form-floating">
-                <input type="text" name="name" class="form-control top" placeholder="Name" required>
-                <label for="floatingInput">Name</label>
-              </div>
-        
-            <div class="form-floating">
-              <input type="email" name="email" class="form-control bottom" placeholder="name@example.com" required>
-              <label for="floatingInput">Email address</label>
-            </div>
-            <br>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Subscribe</button>
-          </form>
-          <p style="color: rgb(233, 227, 227);">Note: After clicking on button, you will receive confirmation. If not, try again.</p>
-        </main>  
-        </div> -->
-
-    <!-- </div> --> 
 
     <div class="newsletterSection" id="newsletter">
-<div class="formNews">
-    <script async data-uid="4f93cebb50" src="https://colossal-trailblazer-7317.ck.page/4f93cebb50/index.js"></script>
-</div>
+        <script async data-uid="7d7fd5b60c" src="https://colossal-trailblazer-7317.ck.page/7d7fd5b60c/index.js"></script>
 </div>
 
 
@@ -192,15 +140,11 @@
 
          </p>
         </div>
-
-        <img src="images/blob.png" class="aboutBackground">
-
-
     </div>
 
-    <footer class="footer blogFooterClass" id="foot">
-        <h3 class="footerText blogFooterText">Piyush Jaiswal &#169; 2021 </h3>
-        <h5 class="footerText footerPara blogFooterPara">
+    <footer class="footer" id="foot">
+        <h3 class="footerText">Piyush Jaiswal &#169; 2021 </h3>
+        <h5 class="footerText">
        Shoot me an email at:</h5>
        <h5 class="email">piyushjaiswalofficial001@gmail.com </h5>           
 
